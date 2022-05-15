@@ -6,6 +6,6 @@ type cases = [
   Expect<Equal<TupleToObject<typeof tuple>, { tesla: 'tesla'; 'model 3': 'model 3'; 'model X': 'model X'; 'model Y': 'model Y' }>>,
 ]
 
-// @ts-expect-error
+// @ts-expect-error  TS注释
 type error = TupleToObject<[[1, 2], {}]>
 

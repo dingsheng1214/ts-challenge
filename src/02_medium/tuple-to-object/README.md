@@ -28,3 +28,12 @@ const MyArray = [
 type Person = typeof MyArray[number];
 
 ```
+
+## // @ts-expect-error
+> [// @ts-expect-error](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html#-ts-expect-error-comments)
+
+被 `// @ts-expect-error` 注释的语句如果抛出异常，TS将禁止报告该错误。但是如果没有抛出异常，TS将报告异常
+```ts
+// @ts-expect-error
+console.log(47 * "octopus");
+```
