@@ -6,6 +6,7 @@ type First1<T extends any[]> = T extends [] ? never : T[0]
 type First2<T extends any[]> = T['length'] extends 0 ? never : T[0]
 // extends union
 type First3<T extends any[]> = T[0] extends T[number] ? T[0] : never
+// 条件类型
 type First<T extends any[]> = T extends [infer First, ...infer Rest] ? First : never 
 
 function firstOfArray(arr) {
@@ -14,3 +15,7 @@ function firstOfArray(arr) {
     // if(arr.length === 0) return 'never'
     return arr[0];
 }
+
+
+
+
